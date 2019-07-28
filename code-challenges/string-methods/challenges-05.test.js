@@ -85,12 +85,10 @@ const listFoods = (recipe) => {
     element = element.slice(secondIndex, element.length);
     
     result.push(element.slice(1));
- });
+  });
 
- return result;
+  return result;
 };
-//   return result;
-// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
