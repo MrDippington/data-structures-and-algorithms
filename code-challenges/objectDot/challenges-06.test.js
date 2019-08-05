@@ -131,11 +131,22 @@ CHALLENGE 5
 
 Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
 ------------------------------------------------------------------------------------------------ */
-
+// got help from James on this one
 const totalCharacters = (arr) => {
-  
+  let newCount = 0;
+  arr.forEach(character => {
+    let objArray = Object.values(character);
+    for (let i = 0; i < 3; i++) {
+      let name = Object.values(objArray)[i];
+      if (typeof name === 'string') {
+        newCount++;
+      } else if (Array.isArray(name)) {
+        newCount += name.length;
+      }
+    }
+  });
+  return newCount;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
